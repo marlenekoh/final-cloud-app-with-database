@@ -167,5 +167,4 @@ def show_exam_result(request, course_id, submission_id):
         grade = int((correct / total) * 100)
 
     context = {'course' : course, 'selected_ids': choice_ids, 'grade': grade}
-    print(context)
     return render(request, 'onlinecourse/exam_result_bootstrap.html', context)
